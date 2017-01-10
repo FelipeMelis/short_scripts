@@ -1,1 +1,3 @@
-# simple_clustering
+# A collection of various scripts
+
+Simple clustering

@@ -8,7 +8,7 @@ from itertools import islice
 csv.register_dialect('excel', delimiter=';', quoting=csv.QUOTE_NONE)
 
 def open_excel_csv():
-    csv_file = open('test.csv', 'rb')
+    csv_file = open(sys.argv[1], 'rb')
     global reader
     reader = csv.reader(csv_file, 'excel')
         
@@ -23,8 +23,7 @@ def create_vector():
         for vector in line[1:]:
             print vector    
 
-sys.stdout = open('file', 'w')
-print 'test'
+#sys.stdout = open('csv.vec', 'w')
         
 open_excel_csv()
 vector_numbers()
